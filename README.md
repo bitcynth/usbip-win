@@ -39,14 +39,6 @@
   - Kernel 4.15.0-29 (USB/IP kernel module crash was observed on some other version)
   - `# modprobe vhci-hcd`
 
-- Install USB/IP test certificate
-  - Install `driver/usbip_test.pfx` (password: usbip)
-  - Certificate should be installed into
-    1. "Trusted Root Certification Authority" in "Local Computer" (not current user) and
-    2. "Trusted Publishers" in "Local Computer" (not current user)
-- Enable test signing
-  - `> bcdedit.exe /set TESTSIGNING ON`
-  - reboot the system to apply
 - Copy `usbip.exe`, `usbipd.exe`, `usb.ids`, `usbip_stub.sys`, `usbip_stub.inx` into a folder in target machine
   - You can find `usbip.exe`, `usbipd.exe`, `usbip_stub.sys` in output folder after build or on [release](https://github.com/cezanne/usbip-win/releases) page.
   - `userspace/usb.ids`
@@ -84,14 +76,6 @@ usbip.exe list -l
 - Run usbipd on a USB/IP server (Linux)
   - `# usbipd -4 -d`
 
-- Install USB/IP test certificate
-  - Install `driver/usbip_test.pfx` (password: usbip)
-  - Certificate should be installed into
-    1. "Trusted Root Certification Authority" in "Local Computer" (not current user) and
-    2. "Trusted Publishers" in "Local Computer" (not current user)
-- Enable test signing
-  - `> bcdedit.exe /set TESTSIGNING ON`
-  - reboot the system to apply
 - Copy `usbip.exe`, `usbip_vhci.sys`, `usbip_vhci.inf`, `usbip_root.inf`, `usbip_vhci.cat` into a folder in target machine
   - You can find all files in output folder after build or on [release](https://github.com/cezanne/usbip-win/releases) page.
 - Install USB/IP VHCI driver
@@ -146,6 +130,3 @@ Windows Registry Editor Version 5.00
 ```
 # dmesg --follow | tee kernel_log.txt
 ```
-
-<hr>
-<sub>This project was supported by Basic Science Research Program through the National Research Foundation of Korea(NRF) funded by the Ministry of Education(2016R1A6A3A11930295).</sub>
