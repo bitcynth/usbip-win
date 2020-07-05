@@ -6,7 +6,7 @@
 #define PACKAGE "usbip"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "usbip-devel@lists.sourceforge.net"
+#define PACKAGE_BUGREPORT "usbip@email.cynthia.re"
 
 /* Define to the full name of this package. */
 #define PACKAGE_NAME "usbip"
