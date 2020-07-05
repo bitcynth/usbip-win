@@ -1,3 +1,7 @@
+# Note
+
+This is a fork of [cezanne/usbip-win](https://github.com/cezanne/usbip-win) that aims to have a release that is properly code signed.
+
 # USB/IP for Windows
 
 - This project aims to support both a USB/IP server and a client on Windows platform.
